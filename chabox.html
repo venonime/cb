@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chat Box</title>
+<style>
+body{
+	margin:0;
+	padding:0;
+}
+.box{
+	width:100%;
+	height:100vh;
+	overflow:hidden;
+}
+</style>
+<script>
+function randRange(data) {
+       var newTime = data[Math.floor(data.length * Math.random())];
+       return newTime;
+}
+
+function toggleSomething() {
+       var timeArray = new Array(12000, 23000, 34000, 45000, 56000);
+
+       // do stuff, happens to use jQuery here (nothing else does)
+       document.getElementById("awawa").src = "https://rawcdn.githack.com/venonime/cb/1f8cd3d421ff6c24b12e26cdbe31d15f8b5a8348/chatangobox.html";
+
+       clearInterval(timer);
+       timer = setInterval(toggleSomething, randRange(timeArray));
+}
+
+var timer = setInterval(toggleSomething, 5000);
+</script>
+</head>
+
+<body>
+<div class="box">
+<iframe id="awawa" src="https://rawcdn.githack.com/venonime/cb/1f8cd3d421ff6c24b12e26cdbe31d15f8b5a8348/chatangobox.html"></iframe>
+</div>
+</body>
+</html>
